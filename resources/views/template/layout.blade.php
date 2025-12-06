@@ -6,7 +6,7 @@
     <title>Landing Page</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body class="bg-gray-900 text-gray-100"> 
+<body class="bg-slate-50 text-gray-800">   <!-- only this line changed -->
     @include('template.header')
     @yield('content')
     @include('template.footer')

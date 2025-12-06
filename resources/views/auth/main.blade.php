@@ -1,34 +1,34 @@
 @extends('template.layout')
 
 @section('content')
-<section id="home" class="max-w-7xl mx-auto px-6 py-24 flex flex-col md:flex-row items-center gap-12">
+<section id="home" class="max-w-7xl mx-auto px-6 py-20 flex flex-col md:flex-row items-center gap-12">
     <div class="flex-1">
-        <h2 class="text-6xl font-extrabold leading-tight mb-6 text-gray-50">Forge Your Digital Destiny: A Future-Forward Experience</h2>
-        <p class="text-xl text-gray-300 mb-10">A sleek, neon-lit design that merges modern professionalism with cutting-edge visual flair.</p>
-        
-        <a href="#contact" class="px-10 py-4 bg-indigo-600 text-white rounded-full text-xl shadow-2xl shadow-indigo-500/50 hover:bg-indigo-500 transition-all duration-300">Start Your Journey</a>
+        <h2 class="text-5xl font-extrabold leading-tight mb-6">Build your future with a modern digital experience</h2>
+        <p class="text-lg text-gray-600 mb-8">A clean, modern design to make your landing page feel fresh and professional.</p>
+        <a href="#contact" class="px-8 py-3 bg-emerald-500 text-white rounded-xl text-lg shadow hover:bg-emerald-600 transition">Get Started</a>
+        <!-- only changed blue-600 → emerald-500 & emerald-600 -->
     </div>
     <div class="flex-1">
-        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" class="rounded-2xl shadow-2xl shadow-indigo-600/40" />
+        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" class="rounded-xl shadow-lg" />
     </div>
 </section>
 
-
-<section id="features" class="bg-gray-800 py-24 border-t border-indigo-900">
+<!-- Features Section -->
+<section id="features" class="bg-white py-20 mt-12 shadow-inner">
     <div class="max-w-7xl mx-auto px-6 text-center">
-        <h3 class="text-5xl font-extrabold mb-16 text-indigo-400">Core Capabilities</h3>
-        <div class="grid md:grid-cols-3 gap-12">
-            <div class="p-8 bg-gray-700 rounded-2xl shadow-xl hover:shadow-indigo-500/30 transition duration-300 border-t-4 border-indigo-500">
-                <h4 class="text-3xl font-bold mb-4 text-indigo-400">Velocity</h4>
-                <p class="text-gray-300 text-lg">Optimized performance with minimal latency and clean architecture.</p>
+        <h3 class="text-4xl font-bold mb-12">Why Choose Us?</h3>
+        <div class="grid md:grid-cols-3 gap-10">
+            <div class="p-6 bg-emerald-50 rounded-xl shadow hover:shadow-lg transition">
+                <h4 class="text-2xl font-semibold mb-3">Fast</h4>
+                <p class="text-gray-600">Optimized performance with clean design.</p>
             </div>
-            <div class="p-8 bg-gray-700 rounded-2xl shadow-xl hover:shadow-indigo-500/30 transition duration-300 border-t-4 border-indigo-500">
-                <h4 class="text-3xl font-bold mb-4 text-indigo-400">Aesthetic</h4>
-                <p class="text-gray-300 text-lg">Futuristic UI elements and a high-impact, sleek design language.</p>
+            <div class="p-6 bg-emerald-50 rounded-xl shadow hover:shadow-lg transition">
+                <h4 class="text-2xl font-semibold mb-3">Modern</h4>
+                <p class="text-gray-600">Trendy UI elements to impress users.</p>
             </div>
-            <div class="p-8 bg-gray-700 rounded-2xl shadow-xl hover:shadow-indigo-500/30 transition duration-300 border-t-4 border-indigo-500">
-                <h4 class="text-3xl font-bold mb-4 text-indigo-400">Adaptivity</h4>
-                <p class="text-gray-300 text-lg">Flawlessly renders on all devices, from mobile to ultra-wide screens.</p>
+            <div class="p-6 bg-emerald-50 rounded-xl shadow hover:shadow-lg transition">
+                <h4 class="text-2xl font-semibold mb-3">Responsive</h4>
+                <p class="text-gray-600">Perfect on all screen sizes.</p>
             </div>
         </div>
     </div>

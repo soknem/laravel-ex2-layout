@@ -1,7 +1,7 @@
-<footer id="contact" class="bg-gray-950 text-gray-300 mt-20 p-12 border-t border-gray-800">
+<footer id="contact" class="bg-emerald-800 text-white mt-20 p-10">
     <div class="max-w-7xl mx-auto text-center">
-        <h4 class="text-3xl font-bold mb-6 text-indigo-400">Connect with Us</h4>
-        <p class="text-lg">Email: contact@mybrand.com</p>
-        <p class="mt-8 text-sm text-indigo-300 opacity-60">© 2025 Digital Destiny Platform. All rights reserved.</p>
+        <h4 class="text-2xl font-semibold mb-4">Contact Us</h4>
+        <p>Email: example@gmail.com</p>
+        <p class="mt-6 text-sm opacity-70">© 2025 Modern UI Landing Page. All rights reserved.</p>
     </div>
 </footer>
