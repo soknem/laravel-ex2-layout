@@ -16,7 +16,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'sqlite'),
+    'default' => env('DB_CONNECTION', 'mysql'),
 
     /*
     |--------------------------------------------------------------------------
@@ -43,25 +43,25 @@ return [
             'transaction_mode' => 'DEFERRED',
         ],
 
-        'mysql' => [
-            'driver' => 'mysql',
-            'url' => env('DB_URL'),
-            'host' => env('DB_HOST', '127.0.0.1'),
-            'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', 'laravel'),
-            'username' => env('DB_USERNAME', 'root'),
-            'password' => env('DB_PASSWORD', ''),
-            'unix_socket' => env('DB_SOCKET', ''),
-            'charset' => env('DB_CHARSET', 'utf8mb4'),
-            'collation' => env('DB_COLLATION', 'utf8mb4_unicode_ci'),
-            'prefix' => '',
-            'prefix_indexes' => true,
-            'strict' => true,
-            'engine' => null,
-            'options' => extension_loaded('pdo_mysql') ? array_filter([
-                PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
-            ]) : [],
-        ],
+        // 'mysql' => [
+        //     'driver' => 'mysql',
+        //     'url' => env('DB_URL'),
+        //     'host' => env('DB_HOST', '127.0.0.1'),
+        //     'port' => env('DB_PORT', '3306'),
+        //     'database' => env('DB_DATABASE', 'laravel'),
+        //     'username' => env('DB_USERNAME', 'root'),
+        //     'password' => env('DB_PASSWORD', ''),
+        //     'unix_socket' => env('DB_SOCKET', ''),
+        //     'charset' => env('DB_CHARSET', 'utf8mb4'),
+        //     'collation' => env('DB_COLLATION', 'utf8mb4_unicode_ci'),
+        //     'prefix' => '',
+        //     'prefix_indexes' => true,
+        //     'strict' => true,
+        //     'engine' => null,
+        //     'options' => extension_loaded('pdo_mysql') ? array_filter([
+        //         PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
+        //     ]) : [],
+        // ],
 
         'mariadb' => [
             'driver' => 'mariadb',
@@ -112,6 +112,45 @@ return [
             // 'encrypt' => env('DB_ENCRYPT', 'yes'),
             // 'trust_server_certificate' => env('DB_TRUST_SERVER_CERTIFICATE', 'false'),
         ],
+        'mysql' => [
+            'driver' => 'mysql',
+            'url' => env('MYSQL_DATABASE_URL'),
+            'host' => env('MYSQL_DB_HOST', '127.0.0.1'),
+            'port' => env('MYSQL_DB_PORT', '3306'),
+            'database' => env('MYSQL_DB_DATABASE', 'forge'),
+            'username' => env('MYSQL_DB_USERNAME', 'forge'),
+            'password' => env('MYSQL_DB_PASSWORD', ''),
+            'unix_socket' => env('MYSQL_DB_SOCKET', ''),
+            'charset' => env('MYSQL_DB_CHARSET', 'utf8mb4'),
+            'collation' => env('MYSQL_DB_COLLATION', 'utf8mb4_unicode_ci'),
+            'prefix' => '',
+            'prefix_indexes' => true,
+            'strict' => true,
+            'engine' => null,
+            'options' => extension_loaded('pdo_mysql') ? array_filter([
+            PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
+        ]) : [],
+    ],
+
+    'oracle' => [
+        'driver' => 'oracle',
+        'tns' => env('ORACLE_DB_TNS', '(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=127.0.0.1)(PORT=1521))(CONNECT_DATA=(SID=ORCL)))'),
+        'host' => env('ORACLE_DB_HOST', '127.0.0.1'),
+        'port' => env('ORACLE_DB_PORT', '1521'),
+        'database' => env('ORACLE_DB_DATABASE', ''),
+        'service_name' => env('ORACLE_DB_SERVICE_NAME', ''),
+        'username' => env('ORACLE_DB_USERNAME', ''),
+        'password' => env('ORACLE_DB_PASSWORD', ''),
+        'charset' => env('ORACLE_DB_CHARSET', 'AL32UTF8'),
+        'prefix' => env('ORACLE_DB_PREFIX', ''),
+        'prefix_schema' => env('ORACLE_DB_SCHEMA_PREFIX', ''),
+        'edition' => env('ORACLE_DB_EDITION', 'ora$base'),
+        'server_version' => env('ORACLE_DB_SERVER_VERSION', '11g'),
+        'load_balance' => env('ORACLE_DB_LOAD_BALANCE', 'yes'),
+        'max_name_len' => env('ORACLE_DB_MAX_NAME_LEN', 30),
+        'dynamic' => [],
+        'session_mode' => env('ORACLE_DB_SESSION_MODE', null),
+    ],
 
     ],
 
